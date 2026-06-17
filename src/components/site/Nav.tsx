@@ -3,15 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { CALL_URL } from "@/lib/assets";
 
-const links = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
-  { to: "/academy", label: "Academy" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/testimonials", label: "Reviews" },
-  { to: "/contact", label: "Contact" },
-] as const;
+const links = [{ to: "/", label: "Home" }] as const;
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
