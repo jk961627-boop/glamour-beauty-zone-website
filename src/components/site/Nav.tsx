@@ -89,7 +89,9 @@ export function Nav() {
                   key={l.to}
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-base hover:bg-cream"
+                  className="rounded-2xl px-4 py-3 text-base text-foreground/80 transition hover:bg-cream hover:text-foreground"
+                  activeProps={{ className: "bg-cream text-foreground font-medium" }}
+                  activeOptions={{ exact: l.to === "/" }}
                 >
                   {l.label}
                 </Link>
