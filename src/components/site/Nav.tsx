@@ -56,7 +56,8 @@ export function Nav() {
                 key={l.to}
                 to={l.to}
                 className="rounded-full px-4 py-2 text-sm text-foreground/80 transition hover:bg-cream hover:text-foreground"
-                activeProps={{ className: "text-foreground bg-cream" }}
+                activeProps={{ className: "text-foreground bg-cream font-medium" }}
+                activeOptions={{ exact: l.to === "/" }}
               >
                 {l.label}
               </Link>
