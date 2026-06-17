@@ -412,6 +412,7 @@ function Home() {
 
       {/* BOOKING CTA */}
       <section className="px-4 py-20">
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[3rem] bg-gradient-noir px-8 py-24 text-center text-primary-foreground sm:px-16">
           <div className="absolute inset-0 opacity-50" aria-hidden>
             <div className="absolute -top-20 left-1/3 h-80 w-80 rounded-full bg-rose-gold blur-[140px]" />
             <div className="absolute -bottom-32 right-1/4 h-96 w-96 rounded-full bg-gold blur-[160px]" />
