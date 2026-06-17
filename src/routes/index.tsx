@@ -5,7 +5,9 @@ import { Reveal } from "@/components/site/Reveal";
 import {
   Scissors, Sparkles, Palette, Crown, Brush, Flower2,
   Heart, Award, GraduationCap, ShieldCheck, ArrowRight, Star,
+  MapPin, Phone, Instagram, MessageCircle, Quote, CheckCircle2,
 } from "lucide-react";
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, CALL_URL, PHONE, ADDRESS } from "@/lib/assets";
 
 export const Route = createFileRoute("/")({
   head: () => ({
