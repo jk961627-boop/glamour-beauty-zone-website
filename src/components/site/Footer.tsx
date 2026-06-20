@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Phone, MapPin, Mail } from "lucide-react";
-import { ADDRESS, CALL_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE } from "@/lib/assets";
+import { ADDRESS, CALL_URL, CALL_2_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE, PHONE_2 } from "@/lib/assets";
 
 export function Footer() {
   return (
@@ -36,12 +36,15 @@ export function Footer() {
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-rose-gold" />
               <span>{ADDRESS}</span>
             </div>
-            <div className="mt-3 flex items-center gap-3 text-sm text-white/70">
+            <a href={CALL_URL} className="mt-3 flex items-center gap-3 text-sm text-white/70 hover:text-rose-gold">
               <Phone className="h-4 w-4 text-rose-gold" /> +91 {PHONE}
-            </div>
-            <div className="mt-3 flex items-center gap-3 text-sm text-white/70">
+            </a>
+            <a href={CALL_2_URL} className="mt-3 flex items-center gap-3 text-sm text-white/70 hover:text-rose-gold">
+              <Phone className="h-4 w-4 text-rose-gold" /> +91 {PHONE_2}
+            </a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="mt-3 flex items-center gap-3 text-sm text-white/70 hover:text-rose-gold">
               <Mail className="h-4 w-4 text-rose-gold" /> @{INSTAGRAM_HANDLE}
-            </div>
+            </a>
           </div>
 
           <div>
