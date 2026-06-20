@@ -1,11 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroBg from "@/assets/hero-salon.jpg";
+import heroBrand from "@/assets/hero-brand.png.asset.json";
+import svcLash from "@/assets/svc-lash.jpg";
+import svcNails from "@/assets/svc-nails.jpg";
+import svcHairExt from "@/assets/svc-hair-ext.jpg";
+import svcHydra from "@/assets/svc-hydra.jpg";
+import svcBotox from "@/assets/svc-botox.jpg";
+import svcKeratin from "@/assets/svc-keratin.jpg";
 import { photos, WHATSAPP_URL } from "@/lib/assets";
 import { Reveal } from "@/components/site/Reveal";
 import {
-  Scissors, Sparkles, Palette, Crown, Brush, Flower2,
-  Heart, Award, GraduationCap, ShieldCheck, ArrowRight, Star,
-  MapPin, Phone, Instagram, MessageCircle, Quote, CheckCircle2,
+  Sparkles, Crown, Heart, Award, GraduationCap, ShieldCheck,
+  ArrowRight, Star, MapPin, Phone, Instagram, MessageCircle, Quote, CheckCircle2,
 } from "lucide-react";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, CALL_URL, PHONE, ADDRESS } from "@/lib/assets";
 
@@ -29,12 +34,12 @@ const stats = [
 ];
 
 const featuredServices = [
-  { icon: Crown, title: "Bridal Makeup", desc: "Signature looks crafted for your most important day." },
-  { icon: Scissors, title: "Hair Styling", desc: "Cuts, blowouts and editorial finishes by master stylists." },
-  { icon: Palette, title: "Hair Coloring", desc: "Global colour, balayage, highlights & glossing." },
-  { icon: Sparkles, title: "Skin & Facials", desc: "Result-driven facials with luxury skincare." },
-  { icon: Brush, title: "HD & Airbrush", desc: "Flawless camera-ready makeup for every occasion." },
-  { icon: Flower2, title: "Spa Therapies", desc: "Hair spa, scalp rituals and relaxing body therapies." },
+  { img: svcLash, title: "Lash Extensions", desc: "Hand-applied mink lashes — wispy, classic or volume sets." },
+  { img: svcNails, title: "Nail Extensions", desc: "Acrylic & gel extensions with bespoke nail art." },
+  { img: svcHairExt, title: "Hair Extensions", desc: "Premium tape-in, clip-in and bond extensions for instant length." },
+  { img: svcHydra, title: "Hydra Facial", desc: "Deep-cleansing hydra-dermabrasion for a luminous glow." },
+  { img: svcBotox, title: "Hair Botox Treatment", desc: "Anti-frizz protein therapy for silky, restored hair." },
+  { img: svcKeratin, title: "Keratin & Smoothening", desc: "Salon-grade smoothening for mirror-finish straight hair." },
 ];
 
 const whyUs = [
