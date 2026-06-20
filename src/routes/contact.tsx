@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import {
-  ADDRESS, CALL_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL,
-  MAP_EMBED, PHONE, WHATSAPP_URL,
+  ADDRESS, CALL_URL, CALL_2_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL,
+  MAP_EMBED, PHONE, PHONE_2, WHATSAPP_URL,
 } from "@/lib/assets";
 import { MapPin, Phone, Instagram, Clock, ArrowRight, MessageCircle } from "lucide-react";
 
@@ -43,10 +43,11 @@ function Contact() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-12">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {[
             { icon: MapPin, title: "Visit", body: ADDRESS, href: "https://maps.google.com/?q=Machhiwara+Sahib" },
             { icon: Phone, title: "Call", body: `+91 ${PHONE}`, href: CALL_URL },
+            { icon: Phone, title: "Call", body: `+91 ${PHONE_2}`, href: CALL_2_URL },
             { icon: MessageCircle, title: "WhatsApp", body: "Tap to message", href: WHATSAPP_URL },
             { icon: Instagram, title: "Instagram", body: `@${INSTAGRAM_HANDLE}`, href: INSTAGRAM_URL },
           ].map((c, i) => (
