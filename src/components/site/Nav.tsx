@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { CALL_URL } from "@/lib/assets";
+import { CALL_URL, CALL_2_URL, PHONE, PHONE_2 } from "@/lib/assets";
 
 const links = [
   { to: "/", label: "Home" },
@@ -65,6 +65,12 @@ export function Nav() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <div className="hidden xl:flex items-center gap-1.5 rounded-full glass px-3 py-2 text-xs text-foreground/80">
+              <Phone className="h-3.5 w-3.5 text-rose-gold-deep" />
+              <a href={CALL_URL} className="hover:text-foreground">+91 {PHONE}</a>
+              <span className="text-foreground/30">·</span>
+              <a href={CALL_2_URL} className="hover:text-foreground">+91 {PHONE_2}</a>
+            </div>
             <a
               href={CALL_URL}
               className="hidden sm:inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm text-primary-foreground transition hover:bg-rose-gold-deep"
@@ -100,7 +106,13 @@ export function Nav() {
                 href={CALL_URL}
                 className="mt-2 rounded-2xl bg-foreground px-4 py-3 text-center text-primary-foreground"
               >
-                Call 7986177501
+                Call +91 {PHONE}
+              </a>
+              <a
+                href={CALL_2_URL}
+                className="mt-2 rounded-2xl border border-foreground/20 px-4 py-3 text-center text-foreground"
+              >
+                Call +91 {PHONE_2}
               </a>
             </div>
           </div>

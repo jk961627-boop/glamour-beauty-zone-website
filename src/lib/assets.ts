@@ -24,10 +24,13 @@ export const photos = {
 
 export const PHONE = "7986177501";
 export const PHONE_INTL = "917986177501";
+export const PHONE_2 = "9646633155";
+export const PHONE_2_INTL = "919646633155";
 export const INSTAGRAM_HANDLE = "glamourbeauty_zonemachhiwara";
 export const INSTAGRAM_URL = "https://instagram.com/glamourbeauty_zonemachhiwara";
 export const WHATSAPP_URL = `https://wa.me/${PHONE_INTL}?text=Hi%20Glamour%20Beauty%20Zone%2C%20I'd%20like%20to%20book%20an%20appointment.`;
 export const CALL_URL = `tel:+91${PHONE}`;
+export const CALL_2_URL = `tel:+91${PHONE_2}`;
 export const ADDRESS = "Majra Road, Near Machhiwara Bus Stand, Machhiwara Sahib, Punjab";
 export const MAP_EMBED =
   "https://www.google.com/maps?q=Machhiwara+Sahib+Punjab&output=embed";
