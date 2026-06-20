@@ -400,6 +400,7 @@ function Home() {
                 {[
                   { icon: MapPin, label: ADDRESS, href: "https://maps.google.com/?q=Machhiwara+Sahib" },
                   { icon: Phone, label: `+91 ${PHONE}`, href: CALL_URL },
+                  { icon: Phone, label: `+91 9646633155`, href: `tel:+919646633155` },
                   { icon: Instagram, label: `@${INSTAGRAM_HANDLE}`, href: INSTAGRAM_URL },
                   { icon: MessageCircle, label: "Mon – Sat · 9:00 to 21:00", href: undefined },
                 ].map((row, i) => (
@@ -454,7 +455,8 @@ function Home() {
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-3">
                 <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="rounded-full bg-gradient-rose px-7 py-4 text-sm text-primary-foreground shadow-glow">WhatsApp Now</a>
-                <a href={`tel:+91${"7986177501"}`} className="rounded-full glass-dark px-7 py-4 text-sm text-white">Call 7986177501</a>
+                <a href={`tel:+91${"7986177501"}`} className="rounded-full glass-dark px-7 py-4 text-sm text-white">Call +91 7986177501</a>
+                <a href={`tel:+919646633155`} className="rounded-full glass-dark px-7 py-4 text-sm text-white">Call +91 9646633155</a>
                 <Link to="/contact" className="rounded-full border border-white/20 px-7 py-4 text-sm text-white">Book Appointment</Link>
               </div>
             </Reveal>
