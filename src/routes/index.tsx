@@ -55,14 +55,14 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[100svh] overflow-hidden">
+      <section className="relative min-h-[100svh] overflow-hidden bg-cream">
         <img
-          src={heroBg}
-          alt="Luxury salon interior"
+          src={heroBrand.url}
+          alt="Glamour Beauty Zone — luxury salon brand"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_oklch(0.78_0.07_35/0.25),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_oklch(0.78_0.07_35/0.15),_transparent_60%)]" />
 
         {/* Floating ornaments */}
         <div className="pointer-events-none absolute inset-0">
@@ -107,6 +107,23 @@ function Home() {
                 Explore Services
               </Link>
             </div>
+          </Reveal>
+
+          {/* Instagram follow strip */}
+          <Reveal delay={550}>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="group mt-6 inline-flex items-center gap-3 rounded-full glass px-5 py-3 text-sm text-foreground/80 shadow-soft transition hover:bg-cream"
+            >
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-gradient-rose text-primary-foreground">
+                <Instagram className="h-4 w-4" />
+              </span>
+              <span className="hidden sm:inline text-foreground/60">Follow us for more updates</span>
+              <span className="font-medium text-rose-gold-deep">@{INSTAGRAM_HANDLE}</span>
+              <ArrowRight className="h-4 w-4 text-rose-gold-deep transition group-hover:translate-x-1" />
+            </a>
           </Reveal>
 
           {/* Stats */}
@@ -175,24 +192,29 @@ function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
-              <span className="text-xs uppercase tracking-[0.3em] text-rose-gold-deep">Signature Services</span>
-              <h2 className="mt-3 font-display text-4xl sm:text-5xl">Crafted rituals for every you</h2>
-              <p className="mt-4 text-foreground/70">From bridal couture to weekend refreshes — every service tailored, every product premium.</p>
+              <span className="text-xs uppercase tracking-[0.3em] text-rose-gold-deep">Featured Services</span>
+              <h2 className="mt-3 font-display text-4xl sm:text-5xl">Our most-loved treatments</h2>
+              <p className="mt-4 text-foreground/70">Signature services our clients book again and again — performed with premium products and certified hands.</p>
             </div>
           </Reveal>
-          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredServices.map((s, i) => (
               <Reveal key={s.title} delay={i * 80}>
-                <div className="group relative h-full overflow-hidden rounded-3xl bg-card p-8 shadow-soft lift">
-                  <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gradient-rose opacity-0 blur-3xl transition group-hover:opacity-40" />
-                  <div className="relative">
-                    <div className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-luxe">
-                      <s.icon className="h-6 w-6 text-rose-gold-deep" />
-                    </div>
-                    <h3 className="mt-6 font-display text-2xl">{s.title}</h3>
+                <div className="group relative h-full overflow-hidden rounded-3xl bg-card shadow-soft lift">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={s.img}
+                      alt={s.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+                  </div>
+                  <div className="p-7">
+                    <h3 className="font-display text-2xl">{s.title}</h3>
                     <p className="mt-2 text-sm text-foreground/70">{s.desc}</p>
                     <a href={WHATSAPP_URL} target="_blank" rel="noreferrer"
-                      className="mt-6 inline-flex items-center gap-1 text-sm text-rose-gold-deep hover:gap-2 transition-all">
+                      className="mt-5 inline-flex items-center gap-1 text-sm text-rose-gold-deep hover:gap-2 transition-all">
                       Book now <ArrowRight className="h-3.5 w-3.5" />
                     </a>
                   </div>
