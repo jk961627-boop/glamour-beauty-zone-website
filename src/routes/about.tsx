@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import founderImg from "@/assets/founder.jpg";
+const founderImg = "/founder-new.jpg";
 import { photos } from "@/lib/assets";
 import { Reveal } from "@/components/site/Reveal";
 import { Award, GraduationCap, Heart, Sparkles, Crown, ShieldCheck } from "lucide-react";

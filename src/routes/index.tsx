@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroBrand from "@/assets/hero-brand.png.asset.json";
 import svcLash from "@/assets/svc-lash.jpg";
 import svcNails from "@/assets/svc-nails.jpg";
 import svcHairExt from "@/assets/svc-hair-ext.jpg";
@@ -57,10 +56,11 @@ function Home() {
       {/* HERO */}
       <section className="relative min-h-[100svh] overflow-hidden bg-cream">
         <img
-          src={heroBrand.url}
-          alt="Glamour Beauty Zone — luxury salon brand"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+  src="/herosalonnew.png"
+  alt="Glamour Beauty Zone"
+  className="absolute inset-0 h-full w-full object-cover object-left"
+  loading="eager"
+/>
         <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/40 to-background" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_oklch(0.78_0.07_35/0.15),_transparent_60%)]" />
 
@@ -319,14 +319,24 @@ function Home() {
         </Reveal>
         <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {[
-            { src: photos.brideVeil, cat: "Bridal", tall: true },
-            { src: photos.hairUpdo, cat: "Hair" },
-            { src: photos.brideRed, cat: "Bridal" },
-            { src: photos.partyMakeup, cat: "Party", tall: true },
-            { src: photos.braidPink, cat: "Hair", tall: true },
-            { src: photos.hairColor, cat: "Color" },
-            { src: photos.brideSide, cat: "Bridal" },
-            { src: photos.bridePortrait, cat: "Bridal", tall: true },
+            
+  { src: photos.brideVeil, cat: "Bridal", tall: true },
+  { src: photos.b2, cat: "Bridal" },
+  { src: photos.b7, cat: "Bridal", tall: true },
+
+  { src: photos.hairUpdo, cat: "Hair" },
+  { src: photos.h5, cat: "Hair", tall: true },
+  { src: photos.h18, cat: "Hair" },
+
+  { src: photos.partyMakeup, cat: "Party", tall: true },
+  { src: photos.p3, cat: "Party" },
+
+  { src: photos.l1, cat: "Lash" },
+  { src: photos.l4, cat: "Lash", tall: true },
+
+  { src: photos.n2, cat: "Nails" },
+  { src: photos.n6, cat: "Nails", tall: true },
+
           ].map((it, i) => (
             <Reveal key={it.src} delay={(i % 4) * 60}>
               <Link

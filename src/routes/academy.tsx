@@ -106,7 +106,13 @@ function Academy() {
             </div>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {[photos.certHarpreet, photos.certLetter].map((src, i) => (
+            {[
+  photos.certHarpreet,
+  photos.certLetter,
+  photos.c1,
+  photos.c2,
+  photos.c3,
+].map((src, i) => (
               <Reveal key={src} delay={i * 120}>
                 <div className="overflow-hidden rounded-[2rem] bg-card shadow-luxe">
                   <img src={src} alt="Student certification ceremony" className="h-[480px] w-full object-cover" loading="lazy" />
