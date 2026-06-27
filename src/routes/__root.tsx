@@ -69,6 +69,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Luxury salon & beauty academy in Machhiwara Sahib, Punjab." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: "https://glamourbeautyzone.in/og-image.jpg" },
+      { property: "og:url", content: "https://glamourbeautyzone.in" },
+      { name: "twitter:title", content: "Glamour Beauty Zone — Luxury Salon & Beauty Academy in Machhiwara" },
+      { name: "twitter:description", content: "Premium salon, bridal makeup studio and beauty academy in Machhiwara Sahib." },
+      { name: "twitter:image", content: "https://glamourbeautyzone.in/og-image.jpg" },
+      { name: "robots", content: "index, follow" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -77,6 +83,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap",
+
+      },
+      { rel: "canonical", href: "https://glamourbeautyzone.in" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BeautySalon",
+          "name": "Glamour Beauty Zone",
+          "image": "https://glamourbeautyzone.in/storefront.jpg",
+          "description": "Premium salon, bridal makeup studio and beauty academy in Machhiwara Sahib.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Majra Road, Near Machhiwara Bus Stand",
+            "addressLocality": "Machhiwara",
+            "addressRegion": "Punjab",
+            "postalCode": "141115",
+            "addressCountry": "IN"
+          },
+          "url": "https://glamourbeautyzone.in"
+        }),
       },
     ],
   }),
