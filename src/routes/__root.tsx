@@ -61,6 +61,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
+      { name: "google-site-verification", content: "giC71SL4NdEz_gh57B8d4XVvzywDSukDdhuyoJwgEd0" }, 
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Glamour Beauty Zone — Luxury Salon & Beauty Academy in Machhiwara" },
       { name: "description", content: "Premium salon, bridal makeup studio and beauty academy in Machhiwara Sahib. Founded by Karan Singh, 8+ years of artistry." },
