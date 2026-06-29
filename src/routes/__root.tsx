@@ -61,7 +61,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "google-site-verification", content: "giC71SL4NdEz_gh57B8d4XVvzywDSukDdhuyoJwgEd0" }, 
+      { name: "google-site-verification", content: "giC71SL4NdEz_gh57B8d4XVvzywDSukDdhuyoJwgEd0" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Glamour Beauty Zone — Luxury Salon & Beauty Academy in Machhiwara" },
       { name: "description", content: "Premium salon, bridal makeup studio and beauty academy in Machhiwara Sahib. Founded by Karan Singh, 8+ years of artistry." },
@@ -96,7 +96,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "BeautySalon",
           "name": "Glamour Beauty Zone",
           "image": "https://glamourbeautyzone.in/storefront.jpg",
-          "description": "Premium salon, bridal makeup studio and beauty academy in Machhiwara Sahib.",
+          "description": "Glamour Beauty Zone is a top-rated, affordable salon in Machhiwara, Punjab, offering bridal makeup, haircuts, facials, and beauty academy training.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Majra Road, Near Machhiwara Bus Stand",
@@ -106,6 +106,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "addressCountry": "IN"
           },
           "url": "https://glamourbeautyzone.in"
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Glamour Beauty Zone",
+          "url": "https://www.glamourbeautyzone.in",
+          "sameAs": [
+            "https://www.facebook.com/alivebeautysalon96/",
+            "https://instagram.com/glamourbeauty_zonemachhiwara"
+          ]
         }),
       },
     ],
